@@ -1,19 +1,35 @@
-#include<stdio.h>
-#include<conio.h>
-#define TAM 20
+#include <stdio.h>
+#include <string.h>
 
-int main(void){
-	char cadena[TAM];
-	int contador;
-	system("cls");
-	system("color 71");
-	printf("\n\t\t\t Ingresa una palabra: ");
-	
-	scanf("%s", cadena);
-    printf("\n\n\t\t\t La palabra invertida es: ");
-    for(contador=TAM; contador>=0; contador--){
-	printf("%c", cadena[contador]);
+
+char* voltea_cadena(char arr[]) {
+  
+  int largo_cadena = strlen(arr) - 1;
+  char temp;
+
+  for (int i = 0; i <= (largo_cadena / 2); i++) {
+    temp = arr[i];
+    arr[i] = arr[largo_cadena - i];
+    arr[largo_cadena - i] = temp;
+  }
+
+  return arr;
 }
-	getch();
-	return 0;
+
+
+int main()
+{
+
+  //Inicialización de la cadena 
+  char str[100] = "Extrano a mi ex  = xe im a onartxE", * new_str;
+  //printf("Ingrese un texto: %s\n", str);
+
+  // Voltear la cadena 
+  new_str = voltea_cadena(str);
+  //new_str = _strrev(str);
+
+  // Imprimir el resultado 
+  printf("La cadena volteada: %s\n", new_str);
+
+  return 0;
 }
