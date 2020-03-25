@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int carpe,i,ulti,jsum,baia,j;
+    char ext[40];
+    
+    printf("\t\t\tUZI AYUUUUDAAAAAA SALVA MIS CARPETASS :'C:\n\n\n");
+    printf("Da la extencion de la carpeta: ");
+
+    fgets(ext , 40 , stdin );
+
+    printf("Da el numero de carpetas: ");
+    scanf("%d",&carpe);
+        printf("\n");
+
+
+    for (i=1;i<carpe;i++)
+    {
+        printf("\nNombre de la %da carpeta %s. ",i,ext);
+        scanf("%d",&baia);
+    }
+
+    printf("\nNombre de la %da carpeta %s.  ",i,ext);
+    scanf("%d",&ulti);
+
+    printf("Ingresa el numero que vamos a sumar");
+    scanf("%d",&jsum);
+
+    j=0;
+
+
+    for (j=12;j<=jsum;j++)
+    {
+        printf("%s.%d \n",ext,j);
+    }
+
+}
