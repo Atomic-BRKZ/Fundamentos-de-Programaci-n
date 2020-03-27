@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    float g, m, s;
+    float g2, m2, s2;
+    int res,res2;
+    float val1,val2;
+
+    printf("primero NORTE, segundo SUR ");
+    printf("De manera consecutiva mete los grados luego los minutos y al fnal los ssegundos");
+    scanf("%d",&res);
+    scanf("%f",&g);
+    printf("\n");
+    scanf("%f",&m);
+    printf("\n");
+    scanf("%f",&s);
+    printf("\n");
+
+    printf("1 Este 2 Oeste");
+    scanf("%d",&res2);
+    printf("De manera consecutiva mete los grados luego los minutos y al fnal los ssegundos");
+    scanf("%f",&g2);
+    printf("\n");
+    scanf("%f",&m2);
+    printf("\n");
+    scanf("%f",&s2);
+    printf("\n");
+
+    if (res==2)
+    {
+       val1= -((g)+(m/60)+(s/3600));
+    }
+    else
+    {
+        val1= ((g)+(m/60)+(s/3600));
+
+    }
+    if (res2==2)
+    {
+       val2= -((g2)+(m2/60)+(s2/3600));
+    }
+    else
+    {
+       val1= ((g2)+(m2/60)+(s2/3600));
+    }
+    printf("Tus coordenadas son las siguientes: %f %f ",val1,val2);
+
+
+}
