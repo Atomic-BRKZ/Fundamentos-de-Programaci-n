@@ -1,50 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main()
-{
-    float g, m, s;
-    float g2, m2, s2;
-    int res,res2;
-    float val1,val2;
-
-    printf("primero NORTE, segundo SUR ");
-    printf("De manera consecutiva mete los grados luego los minutos y al fnal los segundos");
-    scanf("%d",&res);
-    scanf("%f",&g);
-    printf("\n");
-    scanf("%f",&m);
-    printf("\n");
-    scanf("%f",&s);
-    printf("\n");
-
-    printf("Primero Este Segundo Oeste");
-    scanf("%d",&res2);
-    printf("De manera consecutiva mete los grados luego los minutos y al fnal los segundos");
-    scanf("%f",&g2);
-    printf("\n");
-    scanf("%f",&m2);
-    printf("\n");
-    scanf("%f",&s2);
-    printf("\n");
-
-    if (res==2)
+ int main()
     {
-       val1= -((g)+(m/60)+(s/3600));
-    }
-    else
-    {
-        val1= ((g)+(m/60)+(s/3600));
+    	float grad,min,seg,grad2,min2,seg2,val1,val2;
+    	int res,res2;
+    	do{
+    	   	printf("pon 1 NORTE, y 2 para SUR \n");
+    	   	printf("De manera consecutiva mete los grados luego los minutos y al fnal los segundos");
+    	   	 scanf("%d",&res);
+             scanf("%f",&grad);
+            printf("\n");
+             scanf("%f",&min);
+            printf("\n");
+             scanf("%f",&seg);
+            printf("\n");
+		}while(grad<0||min<0||seg<0||res<0);
+		do{
+    	   	printf("pon 1 para ESTE, y 2 OESTE \n");
+    	   	printf("De manera consecutiva mete los grados luego los minutos y al fnal los segundos");
+    	   	 scanf("%d",&res2);
+             scanf("%f",&grad2);
+            printf("\n");
+             scanf("%f",&min2);
+            printf("\n");
+             scanf("%f",&seg2);
+            printf("\n");
+		}while(grad2<0||min2<0||seg2<0||res2<0);
+		if (res==2)
+          {
+           val1= -((grad)+(min/60)+(seg/3600));
+           }
+        else
+            {
+             val1= ((grad)+(min/60)+(seg/3600));
 
-    }
-    if (res2==2)
-    {
-       val2= -((g2)+(m2/60)+(s2/3600));
-    }
-    else
-    {
-       val1= ((g2)+(m2/60)+(s2/3600));
-    }
-    printf("Tus coordenadas son las siguientes: %f %f ",val1,val2);
-
-
-}
+           }
+        if (res2==2)
+          {
+           val2= -((grad2)+(min2/60)+(seg2/3600));
+         }
+        else
+            {
+             val1= ((grad2)+(min2/60)+(seg2/3600));
+           }
+          printf("Tus coordenadas son las siguientes: %f %f ",val1,val2);
+ 
+		return 0;
+	}
