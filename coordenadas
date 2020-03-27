@@ -3,29 +3,39 @@
  int main()
     {
     	float grad,min,seg,grad2,min2,seg2,val1,val2;
-    	int res,res2;
+    	char res,res2;
     	do{
-    	   	printf("pon 1 NORTE, y 2 para SUR \n");
+    	   	printf("N para NORTE, y S para SUR \n");
     	   	printf("De manera consecutiva mete los grados luego los minutos y al fnal los segundos");
-    	   	 scanf("%d",&res);
+    	   	 scanf("%c",&res);
+    	   	printf("Latitud [N/S]: %c",res);
+    	   	printf("\n");
              scanf("%f",&grad);
+            printf("Grados [0-59]: %f",grad); 
             printf("\n");
              scanf("%f",&min);
+            printf("Minutos [0-59]: %f",min); 
             printf("\n");
              scanf("%f",&seg);
+             printf("Segundos [0-59.9]: %f",seg); 
             printf("\n");
-		}while(grad<0||min<0||seg<0||res<0);
+		}while(grad<0||min<0||seg<0);
 		do{
-    	   	printf("pon 1 para ESTE, y 2 OESTE \n");
+    	   	printf("pon E para ESTE, y O para OESTE \n");
     	   	printf("De manera consecutiva mete los grados luego los minutos y al fnal los segundos");
-    	   	 scanf("%d",&res2);
+    	   	 scanf("%c",&res2);
+    	   	printf("Longitud [E/O]: %c",res);
+    	   	printf("\n");
              scanf("%f",&grad2);
+            printf("Grados [0-59]: %f",grad2); 
             printf("\n");
              scanf("%f",&min2);
+            printf("Minutos [0-59]: %f",min2); 
             printf("\n");
              scanf("%f",&seg2);
+             printf("Segundos [0-59.9]: %f",seg2); 
             printf("\n");
-		}while(grad2<0||min2<0||seg2<0||res2<0);
+		}while(grad2<0||min2<0||seg2<0);
 		if (res==2)
           {
            val1= -((grad)+(min/60)+(seg/3600));
@@ -43,7 +53,7 @@
             {
              val1= ((grad2)+(min2/60)+(seg2/3600));
            }
-          printf("Tus coordenadas son las siguientes: %f %f ",val1,val2);
+          printf("Https://maps.google.com/maps/place/ %f, %f ",val1,val2);
  
 		return 0;
 	}
