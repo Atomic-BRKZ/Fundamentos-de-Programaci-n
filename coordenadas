@@ -24,7 +24,7 @@
     	   	printf("pon E para ESTE, y O para OESTE \n");
     	   	printf("De manera consecutiva mete los grados luego los minutos y al fnal los segundos");
     	   	 scanf("%c",&res2);
-    	   	printf("Longitud [E/O]: %c",res);
+    	   	printf("Longitud [E/O]: %c",res2);
     	   	printf("\n");
              scanf("%f",&grad2);
             printf("Grados [0-59]: %f",grad2); 
@@ -51,7 +51,7 @@
          }
         else
             {
-             val1= ((grad2)+(min2/60)+(seg2/3600));
+             val2= ((grad2)+(min2/60)+(seg2/3600));
            }
           printf("Https://maps.google.com/maps/place/ %f, %f ",val1,val2);
  
